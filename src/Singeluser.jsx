@@ -35,7 +35,7 @@ const Singleuser = ({
 
         <button
           onClick={handleData}
-          className="px-4 py-2 border hover:bg-purple-500 hover:text-white cursor-pointer active:scale-95 border-purple-500 rounded-full"
+          className="px-4 py-2 border hover:bg-blue-300 hover:text-white cursor-pointer active:scale-95 border-blue-500 rounded-full"
         >
           View
         </button>

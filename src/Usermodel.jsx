@@ -16,17 +16,21 @@ const Usermodel = ({ dekhao, setdekhao, cheak }) => {
             alt=""
           />
 
-          <h2 className="text-center text-xl">{Users_data[cheak].name}</h2>
+          <h2 className="text-center text-xl text-purple-500">
+            {Users_data[cheak].name}
+          </h2>
           <div className="flex justify-center gap-3">
-            <h2 className="bg-green-400 w-max   rounded-md px-3 py-1">
+            <h2 className="bg-blue-400 w-max text-white cursor-pointer  rounded-md px-3 py-1">
               {Users_data[cheak].dob}
             </h2>
 
-            <h2 className="bg-pink-400 w-max  rounded-md px-3 py-1">
+            <h2 className="bg-green-400 w-max cursor-pointer rounded-md px-3 py-1">
               {Users_data[cheak].salery}
             </h2>
           </div>
-          <p className="text-center ">{Users_data[cheak].desc}</p>
+          <p className="text-center text-purple-500 ">
+            {Users_data[cheak].desc}
+          </p>
         </div>
       </div>
     </>
