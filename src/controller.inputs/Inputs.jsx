@@ -4,7 +4,7 @@ import SingleName from "./SingleName";
 
 const Inputs = () => {
   const [text, setText] = useState("");
-
+  const [taskid, settaskid] = useState(null);
   const [myData, setMyData] = useState([]);
 
   const [error, setError] = useState(false);
@@ -17,12 +17,25 @@ const Inputs = () => {
       toast.success("value added");
       setError(false);
 
-      setMyData([...myData, text]);
+      setMyData([
+        ...myData,
+        {
+          text: text,
+          jjjj: Date.now(),
+        },
+      ]);
 
       console.log(text);
     }
     setText("");
   };
+
+  const remove = (id) => {
+    const updated = myData.filter((i) => i.jjjj !== taskid);
+
+    setMyData(updated);
+  };
+  console.log(Date.now());
 
   return (
     <>
@@ -56,8 +69,16 @@ const Inputs = () => {
         </form>
       </div>
       <div className="container mx-auto grid grid-cols-4 gap-3">
+        {" "}
         {myData.map((item, index) => {
-          return <SingleName name={item} />;
+          return (
+            <SingleName
+              {...item}
+              key={index}
+              settaskid={settaskid}
+              onremove={remove}
+            />
+          );
         })}
       </div>
     </>

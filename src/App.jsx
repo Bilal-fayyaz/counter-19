@@ -4,8 +4,9 @@ import Info from "./Info";
 import Counter from "./Counter";
 import Mobile from "./Mobile";
 import Singeluser from "./Singeluser";
-import Inputs from "./controller.inputs/Inputs";
+// import Inputs from "./controller.inputs/Inputs";
 import { Toaster } from "react-hot-toast";
+import Multipalinputs from "./Multipalinputs";
 
 const App = () => {
   return (
@@ -13,8 +14,9 @@ const App = () => {
       {/* <Info /> */}
       {/* <Mobile /> */}
       {/* <Counter /> */}
-      <Inputs />
+      {/* <Inputs /> */}
       <Toaster />
+      <Multipalinputs />
     </>
   );
 };
