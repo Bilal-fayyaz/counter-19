@@ -7,6 +7,7 @@ import Singeluser from "./Singeluser";
 // import Inputs from "./controller.inputs/Inputs";
 import { Toaster } from "react-hot-toast";
 import Multipalinputs from "./Multipalinputs";
+import SaidBar from "./SaidBars/SaidBar";
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
       {/* <Counter /> */}
       {/* <Inputs /> */}
       <Toaster />
-      <Multipalinputs />
+      {/* <Multipalinputs /> */}
+      <SaidBar />
     </>
   );
 };
